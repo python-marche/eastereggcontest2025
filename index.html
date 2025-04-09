@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python Marche - Easter Egg Contest 2025. Unisciti alla community di sviluppatori Python marchigiani per eventi, progetti e networking.">
+    <meta name="keywords" content="Python, Marche, Easter Egg Contest, Community, Sviluppatori, Meetup, Eventi, Progetti Collaborativi">
+    <title>Python Marche</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .hero {
+            background-color: #1b6f3b;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1b6f3b;
+            border-bottom: 2px solid #1b6f3b;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li a {
+            color: #1b6f3b;
+            text-decoration: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .easter-egg:hover {
+            opacity: 1;
+        }
+
+        .easter-egg-content {
+            display: none;
+            position: fixed;
+            bottom: 3rem;
+            right: 1rem;
+            left: 1rem;
+            top: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: left;
+        }
+
+        .easter-egg-content img {
+            max-width: 70%;
+            width: auto;
+            height: auto;
+            max-height: 60%;
+            margin-top: 10px;
+        }
+
+        .code-container {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: monospace;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .copy-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 4px 4px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        .copy-btn:hover {
+            background: #45a049;
+        }
+
+        .extra-small {
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Python Marche - Easter Egg Contest 2025</h1>
+        <p>Il primo contest della community di sviluppatori Python marchigiani (e non).</p>
+    </div>
+
+    <div class="content">
+        <h2>Chi Siamo?</h2>
+        <p>Python Marche è nata per creare un punto di incontro per sviluppatori e appassionati di Python nella regione Marche. Siamo aperti a tutti i livelli di esperienza, dai principianti ai professionisti, con l'obiettivo di condividere conoscenze, fare rete e crescere insieme.</p>
+
+        <h2>Cosa Facciamo?</h2>
+        <ul>
+            <li>Organizziamo eventi e meetup per imparare e connetterci.</li>
+            <li>Creiamo spazi per progetti collaborativi.</li>
+            <li>Collaboriamo con altre community locali e nazionali.</li>
+            <li>Vogliamo far crescere sempre di più la nostra community!</li>
+        </ul>
+
+        <h2>Come entrare a fare parte della nostra Community?</h2>
+        <ul>
+            <li>Visita il nostro <a href="https://marche.python.it" target="_blank">Sito Web</a></li>
+            <li>Unisciti al nostro <a href="https://t.me/pythonmarche" target="_blank">Gruppo Telegram</a></li>
+            <li>Seguici su <a href="https://www.linkedin.com/company/python-marche/" target="_blank">LinkedIn</a></li>
+            <li>Proponi un talk (la <a href="https://forms.gle/BXqQvAZ1TaRLEfwo6" target="_blank">CFP</a> è sempre aperta!)</li>
+            <li>... oppure partecipa ai nostri <a href="https://lu.ma/pythonmarche" target="_blank">eventi e meetup!</a></li>
+        </ul>
+
+        <a href="https://forms.gle/BXqQvAZ1TaRLEfwo6" class="cta-button">Proponi un Talk!</a>
+
+        <h2>I Nostri Partner</h2>
+        <ul>
+            <li><a href="https://associazione.python.it">Python Italia</a></li>
+            <li><a href="https://dev.marche.it">Dev Marche</a></li>
+        </ul>
+    </div>
+
+    <div class="easter-egg" onclick="toggleEasterEgg()">🐍🐣</div>
+    <div class="easter-egg-content" id="easterEggContent">
+        <h3>Complimenti hai scovato l'easter egg!</h3>
+        <h4>Un piccolo segreto per te...</h4>
+        <p>Lo sapevi che il nome del linguaggio di programmazione <a href="https://it.wikipedia.org/wiki/Python" target="_blank">Python</a> è stato ispirato dalla serie televisiva <a href="https://it.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monty Python's Flying Circus</a>? 🎬</p>
+        <center>
+            <img src="https://upload.wikimedia.org/wikipedia/it/9/94/MPFC.jpg" width="80%" height="80%" alt="Monty Python's Flying Circus">
+            <div class="code-container" width="40%">
+                <code id="codeSnippet">#montypythonsflyingcircus</code>
+                <button class="copy-btn" onclick="copyToClipboard()" id="copyButton">Capture The Flag</button>
+            </div>
+            <p class="extra-small">Shhh 🤫... non tutti arrivano fin qui! 😎</p>
+            <p class="extra-small">Per completare la sfida cattura la 'flag' e inseriscila qui 👉 <a href="https://forms.gle/TFh23AN3Z5cSYMw78" target="_blank">[link]</a></p>
+        </center>
+    </div>
+
+    <script>
+        function toggleEasterEgg() {
+            var x = document.getElementById("easterEggContent");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function copyToClipboard() {
+        const codeText = document.getElementById("codeSnippet").innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            const button = document.getElementById("copyButton");
+            button.innerText = "Catturata!";
+            setTimeout(() => button.innerText = "Capture The Flag", 1000);
+        });
+    }
+    </script>
+</body>
+</html>
